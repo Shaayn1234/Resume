@@ -1,162 +1,149 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #e0eafc, #cfdef3);
-    color: #2c3e50;
-    padding: 40px 20px;
-    animation: fadeIn 1.5s ease-in;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #dae6f6, #f5f7fa);
+  color: #333;
+  padding: 40px 20px;
+  animation: fadeInBody 1s ease;
 }
 
 .resume-container {
-    max-width: 1000px;
-    margin: auto;
-    background: #ffffff;
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 2s ease;
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-
 header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 3em;
-    color: #1a1a1a;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+  font-size: 2.8em;
+  color: #2a5d9f;
+  margin-bottom: 10px;
 }
 
-.contact-info {
-    font-size: 1.1em;
-    color: #555;
-    margin-top: 10px;
+header p {
+  font-size: 1em;
+  color: #555;
 }
 
-
-section {
-    margin-bottom: 40px;
+h2 {
+  font-size: 1.6em;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  text-align: center;
+  position: relative;
 }
 
-section h2 {
-    font-size: 1.8em;
-    color: #4a90e2;
-   border-bottom: 2px solid #4a90e2;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    position: relative;
+h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #4a90e2;
+  border-radius: 2px;
 }
 
-section h2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 60px;
-    height: 3px;
-    background-color: #4a90e2;
+.card {
+  background: #f9fbff;
+  border-left: 4px solid #4a90e2;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation: slideUp 0.5s ease-in-out;
 }
 
-
-.job, .education {
-    background: #f9fafc;
-    padding: 20px;
-    border-left: 5px solid #4a90e2;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+h3 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-.job:hover, .education:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.job-details {
+  font-size: 0.95em;
+  color: #777;
+  margin-bottom: 10px;
 }
-
-.job h3, .education h3 {
-    font-size: 1.3em;
-    color: #2c3e50;
-}
-
-.job-details, .edu-details {
-    font-size: 0.95em;
-    color: #777;
-    margin-bottom: 10px;
-}
-
 
 ul {
-    padding-left: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 ul li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-    transition: color 0.3s ease;
+  margin-bottom: 8px;
 }
 
-ul li:hover {
-    color: #4a90e2;
+.grid-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding-left: 0;
 }
 
-
-.skills ul, .certifications ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
-    list-style: none;
-    padding: 0;
+.grid-list li {
+  background: #eef4fd;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skills li, .certifications li {
-    background: #e8f0fe;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 600;
-    color: #1a1a1a;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: background 0.3s, transform 0.3s;
+.grid-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 }
 
-.skills li:hover, .certifications li:hover {
-    background: #d2e3fc;
-    transform: scale(1.05);
+.summary {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: 1.05em;
 }
 
-
-@media (max-width: 768px) {
-    .resume-container {
-        padding: 30px 20px;
-    }
-
-    header h1 {
-        font-size: 2em;
-    }
-
-    section h2 {
-        font-size: 1.5em;
-    }
+/* Animations */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+.fade-in {
+  animation: fadeInSection 0.8s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+
 
 
 
