@@ -14,27 +14,37 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+body:hover {
+    background-color: #e1f5fe; /* Light blue background on hover */
 }
 
 .container {
     width: 80%;
     max-width: 900px;
     background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 15px;
+    padding: 40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 .header {
     text-align: center;
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50, #ff9800);
     color: white;
-    padding: 30px 20px;
-    border-radius: 10px 10px 0 0;
+    padding: 40px 20px;
+    border-radius: 15px 15px 0 0;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1s ease-out;
+    animation: slideIn 1.5s ease-out;
 }
 
 .header h1 {
@@ -49,9 +59,9 @@ body {
 
 .section-title {
     font-size: 24px;
-    color: #4CAF50;
+    color: #ff9800;
     margin-bottom: 10px;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 3px solid #ff9800;
     padding-bottom: 5px;
     transition: transform 0.3s ease;
 }
@@ -61,7 +71,7 @@ body {
 }
 
 .content {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .content ul {
@@ -80,6 +90,14 @@ body {
     color: #333;
     margin-bottom: 5px;
     font-weight: 600;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+
+.content h3:hover {
+    color: #4CAF50;
 }
 
 .content p {
@@ -89,35 +107,58 @@ body {
 
 .skill-bar {
     background-color: #e0e0e0;
-    height: 10px;
-    border-radius: 5px;
+    height: 12px;
+    border-radius: 10px;
     margin-top: 8px;
     overflow: hidden;
     animation: fillBar 2s ease-in-out forwards;
+    transition: background-color 0.5s ease;
+}
+
+.skill-bar:hover {
+    background-color: #4CAF50;
 }
 
 .skill-bar span {
     display: block;
     height: 100%;
-    background-color: #4CAF50;
+    background-color: #ff9800;
     width: 0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .experience, .education {
-    padding: 15px;
+    padding: 20px;
     background-color: #f4f4f4;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, background-color 0.5s ease;
 }
 
 .experience:hover, .education:hover {
     transform: translateX(10px);
+    background-color: #d1c4e9; /* Light purple on hover */
 }
 
-/* Animations */
+.experience ul, .education ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience li, .education li {
+    margin-bottom: 15px;
+}
+
+.experience h3, .education h3 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff5722, #f44336);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -143,9 +184,10 @@ body {
         width: 0;
     }
     100% {
-        width: 80%; /* Change this percentage for skill level */
+        width: 90%; /* Adjust skill level here */
     }
 }
+
 
 
 
