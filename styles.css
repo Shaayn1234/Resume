@@ -1,152 +1,152 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #dbeafe, #f3e8ff);
-  color: #333;
-  padding: 40px 20px;
-  animation: fadeInBody 1s ease;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.resume-container {
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+.container {
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-header {
-  margin-bottom: 30px;
-  text-align: left;
+.header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
 }
 
-header h1 {
-  font-size: 2.8em;
-  color: #7c3aed;
-  margin-bottom: 10px;
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1em;
-  color: #555;
+.header p {
+    font-size: 18px;
+    font-weight: 300;
 }
 
-h2 {
-  font-size: 1.6em;
-  color: #2563eb;
-  margin-bottom: 15px;
-  text-align: left;
-  position: relative;
-  padding-bottom: 5px;
+.section-title {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    transition: transform 0.3s ease;
 }
 
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 50px;
-  height: 3px;
-  background-color: #6366f1;
-  border-radius: 2px;
+.section-title:hover {
+    transform: translateX(10px);
 }
 
-.card {
-  background: #f0f9ff;
-  border-left: 5px solid #7c3aed;
-  padding: 15px 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  animation: slideUp 0.5s ease-in-out;
+.content {
+    margin-bottom: 20px;
 }
 
-h3 {
-  font-size: 1.2em;
-  color: #111827;
-  margin-bottom: 5px;
+.content ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.job-details {
-  font-size: 0.95em;
-  color: #6b7280;
-  margin-bottom: 10px;
+.content li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-ul {
-  padding-left: 20px;
-  margin-bottom: 10px;
+.content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
-ul li {
-  margin-bottom: 8px;
+.content p {
+    font-size: 16px;
+    color: #555;
 }
 
-.grid-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  padding-left: 0;
+.skill-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 8px;
+    overflow: hidden;
+    animation: fillBar 2s ease-in-out forwards;
 }
 
-.grid-list li {
-  background: #ede9fe;
-  color: #4c1d95;
-  text-align: center;
-  padding: 12px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.skill-bar span {
+    display: block;
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    border-radius: 5px;
 }
 
-.grid-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+.experience, .education {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.summary {
-  max-width: 800px;
-  line-height: 1.6;
-  font-size: 1.05em;
-  color: #374151;
-  margin-bottom: 30px;
+.experience:hover, .education:hover {
+    transform: translateX(10px);
 }
 
-
-@keyframes fadeInBody {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.fade-in {
-  animation: fadeInSection 0.8s ease-in-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-@keyframes fadeInSection {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fillBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%; /* Change this percentage for skill level */
+    }
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(15px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 
 
