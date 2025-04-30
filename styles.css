@@ -18,7 +18,7 @@ body {
 }
 
 body:hover {
-    background-color: #e1f5fe; /* Light blue background on hover */
+    background-color: #e1f5fe; 
 }
 
 .container {
@@ -138,7 +138,7 @@ body:hover {
 
 .experience:hover, .education:hover {
     transform: translateX(10px);
-    background-color: #d1c4e9; /* Light purple on hover */
+    background-color: #d1c4e9; 
 }
 
 .experience ul, .education ul {
@@ -184,7 +184,7 @@ body:hover {
         width: 0;
     }
     100% {
-        width: 90%; /* Adjust skill level here */
+        width: 90%; 
     }
 }
 
