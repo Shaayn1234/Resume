@@ -117,7 +117,7 @@ ul li {
   font-size: 1.05em;
 }
 
-/* Animations */
+
 @keyframes fadeInBody {
   from { opacity: 0; }
   to { opacity: 1; }
