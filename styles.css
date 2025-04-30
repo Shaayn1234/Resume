@@ -7,9 +7,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #e8f0fe, #f5f7fa);
     color: #333;
-    padding: 20px;
+    padding: 30px;
 }
 
 .resume-container {
@@ -17,8 +17,13 @@ body {
     margin: auto;
     background: #fff;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: scale(1.01);
 }
 
 header {
@@ -27,14 +32,15 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #222;
+    font-size: 2.8em;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
 .contact-info {
     font-size: 1em;
     color: #555;
+    font-weight: 500;
 }
 
 section {
@@ -42,20 +48,21 @@ section {
 }
 
 section h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
     color: #4a90e2;
     border-bottom: 2px solid #4a90e2;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
     margin-bottom: 15px;
 }
 
-.job, .education {
+.job, .education-entry {
     margin-bottom: 20px;
 }
 
-.job h3, .education h3 {
-    font-size: 1.2em;
-    color: #333;
+.job h3, .education-entry h3 {
+    font-size: 1.25em;
+    color: #34495e;
+    margin-bottom: 5px;
 }
 
 .job-details, .edu-details {
@@ -76,15 +83,22 @@ ul li {
 .skills ul, .certifications ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 12px;
     list-style-type: none;
     padding-left: 0;
 }
 
 .skills li, .certifications li {
-    background: #f0f4f8;
-    padding: 8px 12px;
-    border-radius: 5px;
+    background: #e3ecf9;
+    padding: 10px 15px;
+    border-radius: 8px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
+    color: #2d3e50;
+    transition: background 0.2s ease;
 }
+
+.skills li:hover, .certifications li:hover {
+    background: #d0ddf5;
+}
+
