@@ -50,10 +50,10 @@ body:hover {
 .header h1 {
     font-size: 40px;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif';
-    background: linear-gradient(135deg, #0288d1, #03a9f4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
 }
 
 }
