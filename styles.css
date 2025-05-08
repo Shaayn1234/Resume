@@ -69,7 +69,7 @@ body:hover {
     font-size: 24px;
     color: #FFFFFF;
     margin-bottom: 10px;
-    border-bottom: 3px solid #0288d1;
+    border-bottom: 3px solid #FFFFFF;
     padding-bottom: 5px;
     transition: transform 0.3s ease;
 }
