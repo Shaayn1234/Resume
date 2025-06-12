@@ -9,22 +9,20 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #e0f7fa;
   line-height: 1.6;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  transition: background-color 0.5s ease;
+  padding: 40px 20px;
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1000px;
   background-color: #1e1e2f;
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
-  animation: fadeIn 1.5s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -40,14 +38,13 @@ body {
   border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
-  animation: slideIn 1s ease-out;
 }
 
 .header h1 {
   font-size: 40px;
   margin-bottom: 10px;
   color: #ffffff;
-  text-shadow: 1px 1px 8px rgba(0, 255, 255, 0.4);
+  text-shadow: 1px 1px 8px rgba(0, 255, 255, 0.3);
 }
 
 .header p {
@@ -106,54 +103,86 @@ body {
   margin-bottom: 15px;
 }
 
-h3 {
+.content h3,
+.experience h3,
+.education h3,
+.certifications h3,
+.volunteering h3 {
   font-size: 22px;
   color: #4dd0e1;
   margin-bottom: 5px;
   font-weight: 600;
 }
 
-p {
+.content p,
+.experience p,
+.education p,
+.certifications p,
+.volunteering p {
   font-size: 16px;
   color: #cfd8dc;
 }
 
 .skill-bar {
   background-color: #37474f;
-  height: 12px;
+  height: 14px;
   border-radius: 10px;
-  margin-top: 8px;
+  margin-top: 6px;
   overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.skill-bar:hover {
+  background-color: #01579b;
+  box-shadow: 0 0 10px #00e5ff;
 }
 
 .skill-bar span {
   display: block;
   height: 100%;
-  background-color: #00bcd4;
-  width: 0;
+  background: linear-gradient(to right, #00e5ff, #00bcd4);
   border-radius: 10px;
-  animation: fillBar 2s forwards;
+  transition: width 1s ease-in-out;
+  animation: bounce 2s infinite ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  50% {
+    transform: translateX(3px);
   }
 }
 
-@keyframes fillBar {
-  from { width: 0; }
-  to { width: 100%; }
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p,
+  .section-title,
+  .content p,
+  .experience p,
+  .education p,
+  .certifications p,
+  .volunteering p {
+    font-size: 15px;
+  }
+
+  .content h3,
+  .experience h3,
+  .education h3,
+  .certifications h3,
+  .volunteering h3 {
+    font-size: 18px;
+  }
 }
+
 
 
