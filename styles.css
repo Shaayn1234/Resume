@@ -1,12 +1,12 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
+  background: linear-gradient(to right, #f0f0f0, #e6ecf0);
   color: #333;
 }
 
@@ -15,95 +15,110 @@ body {
   max-width: 1100px;
   margin: 40px auto;
   background: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 /* Sidebar */
 .sidebar {
   width: 30%;
-  background-color: #2d3e50;
-  color: #fff;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  color: white;
   padding: 30px 20px;
+  text-align: center;
 }
 
-.profile-pic img {
-  width: 100%;
+.profile img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  border: 3px solid white;
+  transition: transform 0.3s ease;
 }
 
-.sidebar h1 {
+.profile img:hover {
+  transform: scale(1.05);
+}
+
+.profile h1 {
   font-size: 24px;
   margin-bottom: 5px;
 }
 
-.sidebar .title {
-  font-style: italic;
+.subtitle {
   font-size: 14px;
-  margin-bottom: 20px;
-  color: #bbb;
-}
-
-.sidebar section {
-  margin-bottom: 25px;
+  color: #ccc;
 }
 
 .sidebar h2 {
   font-size: 16px;
+  margin-top: 25px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #555;
-  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  text-align: left;
 }
 
-.sidebar ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.sidebar p {
+.sidebar p, .sidebar li {
   font-size: 14px;
-  margin-bottom: 6px;
+  text-align: left;
 }
 
-/* Main */
-.main {
+.skills ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* Main Content */
+.content {
   width: 70%;
   padding: 40px 30px;
+  background: #fff;
 }
 
-.main section {
-  margin-bottom: 30px;
+.content section {
+  margin-bottom: 35px;
 }
 
-.main h2 {
-  font-size: 20px;
-  color: #2d3e50;
+.content h2 {
+  font-size: 22px;
+  color: #2c3e50;
   margin-bottom: 12px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 4px;
+  border-left: 5px solid #3498db;
+  padding-left: 10px;
 }
 
 .item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .item h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: #34495e;
-  margin-bottom: 4px;
-}
-
-.item .date {
-  font-style: italic;
-  font-size: 13px;
-  color: #777;
   margin-bottom: 5px;
 }
 
-.main ul {
-  list-style-type: square;
-  margin-left: 20px;
+.date {
+  font-style: italic;
+  color: #888;
+  font-size: 14px;
 }
+
+ul {
+  padding-left: 20px;
+  list-style-type: square;
+}
+
+ul li:hover {
+  color: #3498db;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
 
 
 
