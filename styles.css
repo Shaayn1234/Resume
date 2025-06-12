@@ -1,162 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaayn Sharma - Neon Resume</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="resume">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="profile.jpg" alt="Shaayn Sharma" />
+        <h1>Shaayn Sharma</h1>
+        <p class="subtitle">Lifeguard & Swim Instructor</p>
+      </div>
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: shaayn@email.com</p>
+        <p>Phone: +1 123 456 7890</p>
+        <p>Location: Canada</p>
+      </section>
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>CPR & First Aid</li>
+          <li>Swim Instruction</li>
+          <li>Amazon Selling</li>
+          <li>Leadership</li>
+          <li>Intermediate French</li>
+        </ul>
+      </section>
+    </aside>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <main class="content">
+      <section class="summary">
+        <h2>Profile</h2>
+        <p>Certified lifeguard and swim instructor with strong leadership and a focus on safety. Passionate about teaching and entrepreneurial work, currently selling on Amazon and planning to build a real estate portfolio.</p>
+      </section>
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
-  color: #fff;
-  line-height: 1.6;
-}
+      <section>
+        <h2>Experience</h2>
+        <div class="item">
+          <h3>Pedalheads Swim Instructor</h3>
+          <span class="date">2024 – Present</span>
+          <p>Conducted engaging and safe swim lessons for youth, emphasizing technique, water confidence, and enjoyment.</p>
+        </div>
+        <div class="item">
+          <h3>Amazon Individual Seller</h3>
+          <span class="date">2023 – Present</span>
+          <p>Researched, listed, and sold niche items on Amazon using the Individual Plan, experimenting with product selection and branding.</p>
+        </div>
+      </section>
 
-.resume {
-  display: flex;
-  max-width: 1100px;
-  margin: 50px auto;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
+      <section>
+        <h2>Education</h2>
+        <div class="item">
+          <h3>Grade 10 Student – Honor Roll</h3>
+          <p>Strong academic performance in business, technology, and French. Known for consistency and a drive to succeed.</p>
+        </div>
+      </section>
 
-/* Sidebar */
-.sidebar {
-  width: 30%;
-  background: linear-gradient(180deg, #1f1c2c, #928dab);
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-}
+      <section>
+        <h2>Volunteering</h2>
+        <div class="item">
+          <h3>TIHET Institutions</h3>
+          <p>Supported events and elderly care activities. Volunteered for weekly community programs and logistical setups.</p>
+        </div>
+        <div class="item">
+          <h3>Swim Meet Volunteer</h3>
+          <p>Provided timing, heat management, and athlete support during swim competitions. Helped ensure smooth operations.</p>
+        </div>
+        <div class="item">
+          <h3>Environmental Cleanup</h3>
+          <p>Led efforts to maintain cleanliness in local parks and riversides, fostering environmental responsibility and teamwork.</p>
+        </div>
+      </section>
 
-.profile img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 3px solid #00f0ff;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s;
-}
-
-.profile img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 20px #00f0ff;
-}
-
-.profile h1 {
-  font-size: 24px;
-  color: #00f0ff;
-  margin-bottom: 4px;
-}
-
-.subtitle {
-  font-size: 14px;
-  color: #d1d1d1;
-  margin-bottom: 25px;
-}
-
-.sidebar h2 {
-  font-size: 16px;
-  color: #fff;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #bbb;
-  padding-bottom: 4px;
-}
-
-.sidebar p, .sidebar li {
-  font-size: 14px;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skills li {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 6px 0;
-  padding: 8px;
-  border-radius: 8px;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.skills li:hover {
-  background: #00f0ff;
-  color: #000;
-  transform: translateX(6px);
-}
-
-/* Main Content */
-.content {
-  width: 70%;
-  padding: 40px 30px;
-}
-
-.content h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  position: relative;
-  color: #fff;
-  text-shadow: 0 0 8px #00f0ff;
-}
-
-.content h2::after {
-  content: '';
-  width: 50px;
-  height: 3px;
-  background: #00f0ff;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  border-radius: 2px;
-}
-
-.item {
-  margin-bottom: 25px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s;
-}
-
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #00f0ff;
-}
-
-.item h3 {
-  color: #00f0ff;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.date {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 6px;
-  font-style: italic;
-}
-
-ul {
-  list-style-type: square;
-  margin-left: 20px;
-}
-
-ul li {
-  margin: 6px 0;
-  transition: color 0.3s ease;
-}
-
-ul li:hover {
-  color: #00f0ff;
-  cursor: pointer;
-}
+      <section>
+        <h2>Achievements</h2>
+        <ul>
+          <li>Honor Roll (Grade 8)</li>
+          <li>Lifeguard Certification (2024)</li>
+          <li>Tennis Tournament Champion (3.0)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
 
 
 
