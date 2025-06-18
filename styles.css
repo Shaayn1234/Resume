@@ -1,99 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaayn Sharma - Neon Resume</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="resume">
-    <aside class="sidebar">
-      <div class="profile">
-        <img src="profile.jpg" alt="Shaayn Sharma" />
-        <h1>Shaayn Sharma</h1>
-        <p class="subtitle">Lifeguard & Swim Instructor</p>
-      </div>
-      <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: shaayn@email.com</p>
-        <p>Phone: +1 123 456 7890</p>
-        <p>Location: Canada</p>
-      </section>
-      <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>CPR & First Aid</li>
-          <li>Swim Instruction</li>
-          <li>Amazon Selling</li>
-          <li>Leadership</li>
-          <li>Intermediate French</li>
-        </ul>
-      </section>
-    </aside>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main class="content">
-      <section class="summary">
-        <h2>Profile</h2>
-        <p>Certified lifeguard and swim instructor with strong leadership and a focus on safety. Passionate about teaching and entrepreneurial work, currently selling on Amazon and planning to build a real estate portfolio.</p>
-      </section>
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
 
-      <section>
-        <h2>Experience</h2>
-        <div class="item">
-          <h3>Pedalheads Swim Instructor</h3>
-          <span class="date">2024 – Present</span>
-          <p>Conducted engaging and safe swim lessons for youth, emphasizing technique, water confidence, and enjoyment.</p>
-        </div>
-        <div class="item">
-          <h3>Amazon Individual Seller</h3>
-          <span class="date">2023 – Present</span>
-          <p>Researched, listed, and sold niche items on Amazon using the Individual Plan, experimenting with product selection and branding.</p>
-        </div>
-      </section>
+body:hover {
+    background-color: #b3e5fc;
+}
 
-      <section>
-        <h2>Education</h2>
-        <div class="item">
-          <h3>Grade 10 Student – Honor Roll</h3>
-          <p>Strong academic performance in business, technology, and French. Known for consistency and a drive to succeed.</p>
-        </div>
-      </section>
+.container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease;
+}
 
-      <section>
-        <h2>Volunteering</h2>
-        <div class="item">
-          <h3>TIHET Institutions</h3>
-          <p>Supported events and elderly care activities. Volunteered for weekly community programs and logistical setups.</p>
-        </div>
-        <div class="item">
-          <h3>Swim Meet Volunteer</h3>
-          <p>Provided timing, heat management, and athlete support during swim competitions. Helped ensure smooth operations.</p>
-        </div>
-        <div class="item">
-          <h3>Environmental Cleanup</h3>
-          <p>Led efforts to maintain cleanliness in local parks and riversides, fostering environmental responsibility and teamwork.</p>
-        </div>
-      </section>
+.container:hover {
+    transform: scale(1.02);
+}
 
-      <section>
-        <h2>Achievements</h2>
-        <ul>
-          <li>Honor Roll (Grade 8)</li>
-          <li>Lifeguard Certification (2024)</li>
-          <li>Tennis Tournament Champion (3.0)</li>
-        </ul>
-      </section>
-    </main>
-  </div>
-</body>
-</html>
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #0288d1, #03a9f4);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-out;
+}
 
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.header p {
+    font-size: 20px;
+    font-weight: 300;
+}
 
+.section-title {
+    font-size: 24px;
+    color: #0288d1;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #0288d1;
+    padding-bottom: 5px;
+    transition: transform 0.3s ease;
+}
 
+.section-title:hover {
+    transform: translateX(10px);
+}
 
+.content {
+    margin-bottom: 25px;
+}
 
+.content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
+.content li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
 
+.content h3 {
+    font-size: 22px;
+    color: #0288d1;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.content p {
+    font-size: 16px;
+    color: #555;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+    animation: fillBar 2s ease-in-out forwards;
+    transition: background-color 0.5s ease;
+}
+
+.skill-bar:hover {
+    background-color: #0288d1;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    background-color: #03a9f4;
+    width: 0;
+    border-radius: 10px;
+}
+
+.experience, .education, .certifications, .volunteering {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+.experience:hover, .education:hover, .certifications:hover, .volunteering:hover {
+    transform: translateX(10px);
+    background-color: #c8e6c9;
+}
+
+.experience ul, .education ul, .certifications ul, .volunteering ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.experience li, .education li, .certifications li, .volunteering li {
+    margin-bottom: 15px;
+}
+
+.experience h3, .education h3, .certifications h3, .volunteering h3 {
+    font-size: 22px;
+    color: #0288d1;
+    font-weight: 600;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fillBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
